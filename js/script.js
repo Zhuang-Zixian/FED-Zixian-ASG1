@@ -61,3 +61,15 @@ if (featuredVideo) {
     console.log("User started watching the featured video.");
   });
 }
+
+/* Index.html popup for reducing CTR -> click through rate */
+// Show the popup when the page loads
+window.onload = function () {
+    document.getElementById("popup").classList.add("show");
+  };
+  
+  // Function to close the popup
+  function closePopup() {
+    document.getElementById("popup").classList.remove("show");
+  }
+  

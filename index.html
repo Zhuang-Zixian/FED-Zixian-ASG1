@@ -25,16 +25,43 @@
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-K35FMWCH"); // GTM ID
-
     </script>
     <!-- NOTE: GOOGLE ANALYTICS WONT WORK ON FILES works only on http:// or https:// -->
     <!-- The implementation for GA is only for showcase. -->
     <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Popup advert -->
+    <div
+      id="popup"
+      class="popup"
+      role="dialog"
+      aria-labelledby="popup-title"
+      aria-describedby="popup-description"
+    >
+      <div class="popup-content">
+        <button
+          class="close-btn"
+          aria-label="Close popup"
+          onclick="closePopup()"
+        >
+          &times;
+        </button>
+        <h2 id="popup-title">Welcome to VoyageVinyl!</h2>
+        <p id="popup-description">
+          Discover exclusive vinyl collections and enjoy special offers.
+        </p>
+        <button onclick="closePopup()">Explore Now</button>
+      </div>
+    </div>
+
+    <!-- Header section-->
     <header>
       <nav class="navbar">
-        <h1 class="logo"><a href="#">VoyageVinyl</a></h1>
+        <div class="logo">
+          <img src="logo.png" alt="Company Logo" />
+          <span>VoyageVinyl</span>
+        </div>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">Store</a></li>
@@ -43,6 +70,7 @@
         </ul>
       </nav>
     </header>
+    <!-- End of header section -->
 
     <main>
       <!-- Top Sellers Section -->
@@ -61,13 +89,26 @@
             <p>In Stock</p>
             <p>$999.99</p>
           </article>
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Name of Product</h3>
+            <p>In Stock</p>
+            <p>$999.99</p>
+          </article>
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Name of Product</h3>
+            <p>In Stock</p>
+            <p>$999.99</p>
+          </article>
           <!-- Add more products as per wireframe -->
-           
         </div>
-        <a href="#" class="view-all">View All</a>
+        <div class="view-all-container">
+          <a href="#" class="view-all">View All</a>
+        </div>
       </section>
 
-      <!-- Featured Section -->
+      <!-- Featured Music Video Section -->
       <section class="featured">
         <h2>Watch Featured Artist MV</h2>
         <video controls width="100%" src="placeholder-video.mp4">
@@ -92,6 +133,7 @@
       </section>
     </main>
 
+    <!-- Footer section start -->
     <footer>
       <section class="about">
         <h2>About</h2>
@@ -119,6 +161,7 @@
       </section>
       <p>&copy; VoyageVinyl. All rights reserved.</p>
     </footer>
+    <!-- Footer section end -->
 
     <!-- Google Tag Manager (noscript) -->
     <noscript
@@ -131,6 +174,7 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Linking to external javascript -->
     <script src="js/script.js"></script>
   </body>
 </html>
