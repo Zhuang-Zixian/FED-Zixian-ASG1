@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoyageVinyl</title>
+    <!-- Poppins font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Linking -->
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-K35FMWCH"); // GTM ID
+
+    </script>
+    <!-- NOTE: GOOGLE ANALYTICS WONT WORK ON FILES works only on http:// or https:// -->
+    <!-- The implementation for GA is only for showcase. -->
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo"><a href="#">VoyageVinyl</a></h1>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">My Cart</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Top Sellers Section -->
+      <section class="top-sellers">
+        <h2>Top Sellers</h2>
+        <div class="product-list">
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Name of Product</h3>
+            <p>In Stock</p>
+            <p>$999.99</p>
+          </article>
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Name of Product</h3>
+            <p>In Stock</p>
+            <p>$999.99</p>
+          </article>
+          <!-- Add more products as per wireframe -->
+        </div>
+        <a href="#" class="view-all">View All</a>
+      </section>
+
+      <!-- Featured Section -->
+      <section class="featured">
+        <h2>Watch Featured Artist MV</h2>
+        <video controls width="100%" src="placeholder-video.mp4">
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- Newsletter Signup -->
+      <section class="newsletter">
+        <h2>Newsletter Signup</h2>
+        <form>
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Signup</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <section class="about">
+        <h2>About</h2>
+        <ul>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Store Locations</a></li>
+        </ul>
+      </section>
+      <section class="contact">
+        <h2>Contact</h2>
+        <address>
+          #2 Ang Mo Kio Dr,<br />
+          ITE College Central<br />
+          Singapore 567720
+        </address>
+      </section>
+      <section class="others">
+        <h2>Others</h2>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Deliveries</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </section>
+      <p>&copy; VoyageVinyl. All rights reserved.</p>
+    </footer>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K35FMWCH"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
