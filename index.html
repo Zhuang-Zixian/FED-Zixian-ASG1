@@ -62,6 +62,11 @@
           <img src="logo.png" alt="Company Logo" />
           <span>VoyageVinyl</span>
         </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">Store</a></li>
@@ -72,11 +77,39 @@
     </header>
     <!-- End of header section -->
 
+    <!-- Main Image Carousel -->
+    <section class="hero-carousel">
+      <div class="carousel">
+        <div class="carousel-slide">
+          <img src="image1.jpg" alt="Hero Image 1" />
+        </div>
+        <div class="carousel-slide">
+          <img src="image2.jpg" alt="Hero Image 2" />
+        </div>
+        <div class="carousel-slide">
+          <img src="image3.jpg" alt="Hero Image 3" />
+        </div>
+      </div>
+      <!-- Navigation Arrows using chevrons-->
+      <button class="carousel-prev" aria-label="Previous Slide">
+        &#10094;
+      </button>
+      <button class="carousel-next" aria-label="Next Slide">&#10095;</button>
+
+      <!-- Circle Indicators for images -->
+      <div class="carousel-indicators">
+        <span class="indicator" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+      </div>
+    </section>
+
     <main>
       <!-- Top Sellers Section -->
       <section class="top-sellers">
         <h2>Top Sellers</h2>
         <div class="product-list">
+          <!-- First row of products -->
           <article class="product">
             <img src="placeholder.png" alt="Product Image" />
             <h3>Name of Product</h3>
@@ -101,10 +134,79 @@
             <p>In Stock</p>
             <p>$999.99</p>
           </article>
-          <!-- Add more products as per wireframe -->
+
+          <!-- Second Row of products -->
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Name of Product</h3>
+            <p>In Stock</p>
+            <p>$999.99</p>
+          </article>
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Name of Product</h3>
+            <p>In Stock</p>
+            <p>$999.99</p>
+          </article>
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Name of Product</h3>
+            <p>In Stock</p>
+            <p>$999.99</p>
+          </article>
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Name of Product</h3>
+            <p>In Stock</p>
+            <p>$999.99</p>
+          </article>
         </div>
+        <!-- view all button -->
         <div class="view-all-container">
           <a href="#" class="view-all">View All</a>
+        </div>
+      </section>
+
+      <!-- New Arrivals Section -->
+      <section class="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div class="tabs">
+          <button class="tab active" onclick="showProducts('category1')">
+            CategoryOne
+          </button>
+          <button class="tab" onclick="showProducts('category2')">
+            CategoryTwo
+          </button>
+          <button class="tab" onclick="showProducts('category3')">
+            CategoryThree
+          </button>
+        </div>
+        <div id="category1" class="product-list active">
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Product 1</h3>
+            <p>$999.99</p>
+            <p>In Stock</p>
+          </article>
+          <!-- Additional products for CategoryOne -->
+        </div>
+        <div id="category2" class="product-list">
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Product 2</h3>
+            <p>$899.99</p>
+            <p>In Stock</p>
+          </article>
+          <!-- Additional products for CategoryTwo -->
+        </div>
+        <div id="category3" class="product-list">
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image" />
+            <h3>Product 3</h3>
+            <p>$799.99</p>
+            <p>In Stock</p>
+          </article>
+          <!-- Additional products for CategoryThree -->
         </div>
       </section>
 
@@ -162,6 +264,10 @@
       <p>&copy; VoyageVinyl. All rights reserved.</p>
     </footer>
     <!-- Footer section end -->
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">^</button>
+    <!-- using a simple ^ to avoid SVG -->
 
     <!-- Google Tag Manager (noscript) -->
     <noscript
