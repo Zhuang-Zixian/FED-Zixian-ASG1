@@ -1,4 +1,5 @@
 // Console log to confirm the script is running
+// this works as a checker
 console.log("VoyageVinyl script.js loaded successfully.");
 
 /* Popup Functionality */

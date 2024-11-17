@@ -108,6 +108,18 @@ main {
 
 
 /* start of Image Carousel Section */
+.visually-hidden { /*used to hide the "Hero Carousel" text for HTML semantics*/
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
 .hero-carousel {
     position: relative;
     width: 100%;
@@ -365,6 +377,11 @@ main {
 .featured video {
     max-width: 100%;
 }
+
+.responsive-video {
+    width: 100%;
+    height: auto;
+  }
 /* end of Featured Section */
 
 
