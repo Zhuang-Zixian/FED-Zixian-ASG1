@@ -23,21 +23,34 @@ header {
 /* Logo Styling */
 .navbar .logo {
     display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.navbar .logo img {
-    width: 40px;
-    height: auto;
+    align-items: center; 
+    gap: 70px; /* Space between image and text */
 }
 
 .navbar .logo a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+    color: white; 
+    padding-left: 5px; /*Logo padding from left edge of screen*/
 }
+
+.navbar .logo img {
+    width: 50px; /* Adjust width to make it smaller */
+    height: auto; 
+    margin-right: 20px; /*text gap to logo*/
+}
+
+.navbar .logo strong {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .logo a:hover strong {
+    color: #f39c12; /* Add hover effect to the text */
+}
+
 
 /* Navigation Links */
 .nav-links {

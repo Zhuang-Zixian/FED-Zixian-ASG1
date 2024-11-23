@@ -2,22 +2,39 @@
 // this works as a checker
 console.log("VoyageVinyl script.js loaded successfully.");
 
-/* Popup Functionality */
-// Trigger popup when the page loads
-window.onload = function () {
-  const popup = document.querySelector("#popup");
-  if (popup) {
-    popup.classList.add("show");
-  }
-};
+// Console log to check if popup is shown
+console.log("Popup status in localStorage:", localStorage.getItem("popupShown"));
 
-// Close popup functionality (if a popup exists in your HTML)
+
+/* Popup Functionality */
+// Trigger popup ONCE ONLY when the page loads
+// Check if the popup has already been shown during this session
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("popup");
+
+  // Check if popup has been shown before
+  if (popup) {
+    const popupShown = localStorage.getItem("popupShown");
+
+    if (!popupShown) {
+      popup.classList.add("show"); // Show popup if not yet shown
+      localStorage.setItem("popupShown", "true"); // Mark popup as shown
+    } else {
+      popup.classList.remove("show"); // Ensure it stays hidden
+    }
+  }
+});
+
+// Function to close the popup
 function closePopup() {
-  const popup = document.querySelector("#popup");
+  const popup = document.getElementById("popup");
   if (popup) {
     popup.classList.remove("show");
   }
 }
+
+
+
 
 // Image carousell functionality including indicators and buttons
 document.addEventListener("DOMContentLoaded", function () {
@@ -76,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   
-    // Initialize carousel
+    // Initialise carousel
     updateCarousel();
   });
     
@@ -115,7 +132,7 @@ document.querySelectorAll(".product").forEach((product) => {
   });
 });
 
-/* Featured Video Alert (Optional) */
+/* Featured Video Alert */
 // Display an alert when a user interacts with the featured video
 const featuredVideo = document.querySelector("video");
 if (featuredVideo) {
