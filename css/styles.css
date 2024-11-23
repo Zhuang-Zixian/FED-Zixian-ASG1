@@ -132,12 +132,17 @@ main {
     white-space: nowrap;
     border: 0;
   }
-  
+
+/* Hero carousel styling */
 .hero-carousel {
     position: relative;
     width: 100%;
-    height: 400px; /* Adjust as needed */
+    height: auto; /* Adjust if not responsive enough... */
+    max-height: 660px; /* prevents it from being too tall*/
     overflow: hidden;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
 }
 
 /* Carousel Container */
@@ -149,15 +154,20 @@ main {
 
 /* Carousel Slides */
 .carousel-slide {
-    min-width: 100%;
-    height: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the full image is visible without cropping */
+    aspect-ratio: 16 / 9; /* Maintain a consistent aspect ratio */
 }
+
 
 /* Navigation Arrows */
 .carousel-prev,

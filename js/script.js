@@ -33,9 +33,6 @@ function closePopup() {
   }
 }
 
-
-
-
 // Image carousell functionality including indicators and buttons
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel");
