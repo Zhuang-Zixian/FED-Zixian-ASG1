@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoyageVinyl</title>
+    <title>Store - VoyageVinyl</title>
     <!-- Poppins font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
@@ -11,55 +11,14 @@
     <!-- CSS Linking -->
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-K35FMWCH"); // GTM ID
-    </script>
-    <!-- NOTE: GOOGLE ANALYTICS WONT WORK ON FILES works only on http:// or https:// -->
-    <!-- The implementation for GA is only for showcase. -->
-    <!-- End Google Tag Manager -->
   </head>
   <body>
-    <!-- Popup advert -->
-    <div
-      id="popup"
-      class="popup"
-      role="dialog"
-      aria-labelledby="popup-title"
-      aria-describedby="popup-description"
-    >
-      <div class="popup-content">
-        <button
-          class="close-btn"
-          aria-label="Close popup"
-          onclick="closePopup()"
-        >
-          &times;
-        </button>
-        <h2 id="popup-title">Welcome to VoyageVinyl!</h2>
-        <p id="popup-description">
-          Discover exclusive vinyl collections and enjoy special offers.
-        </p>
-        <button onclick="closePopup()">Explore Now</button>
-      </div>
-    </div>
 
     <!-- Header section-->
     <header>
       <nav class="navbar">
         <div class="logo">
-          <a href="index.html" onclick="return false;"> 
-            <!-- onclick return false to prevent popup to keep showing up -->
+          <a href="index.html"> 
             <img src="images/voyagevinyl-logo.png" alt="Company Logo">
             <strong>VoyageVinyl</strong>
           </a>
@@ -79,38 +38,16 @@
     </header>
     <!-- End of header section -->
 
-    <!-- Main Image Carousel -->
-    <section class="hero-carousel">
-      <h2 class="visually-hidden">Hero Carousel</h2> <!-- Hidden heading for accessibility for semantics -->
-      <div class="carousel">
-        <div class="carousel-slide">
-          <img src="images/hero-section-images/hero-section-1.png" alt="Voyage Vinyl Opening Sale">
-        </div>
-        <div class="carousel-slide">
-          <img src="images/hero-section-images/hero-section-2.png" alt="Kpop Vinyl Records">
-        </div>
-        <div class="carousel-slide" onclick="scrollToSection('featured')"> <!-- Lead to MV section -->
-          <img src="images/hero-section-images/hero-section-3.png" alt="Daniel Caesar MV Promotion">
-        </div>
-      </div>
-      <!-- Navigation Arrows using chevrons-->
-      <button class="carousel-prev" aria-label="Previous Slide">
-        &#10094;
-      </button>
-      <button class="carousel-next" aria-label="Next Slide">&#10095;</button>
-
-      <!-- Circle Indicators for images -->
-      <div class="carousel-indicators">
-        <span class="indicator" data-slide="0"></span>
-        <span class="indicator" data-slide="1"></span>
-        <span class="indicator" data-slide="2"></span>
-      </div>
-    </section>
-
     <main>
-      <!-- Top Sellers Section -->
+      <!-- Store Section -->
       <section class="top-sellers">
-        <h2>Top Sellers</h2>
+        <!-- header-row to make H1 tag same row as the search bar-->
+        <div class="header-row">
+            <h1>Products - Vinyl</h1><br>
+            <form class="search-bar"  onsubmit="return false;">
+                <input type="text" placeholder="Search..." aria-label="Search">
+            </form>
+        </div>
         <div class="product-list">
           <!-- First row of products -->
           <article class="product">
@@ -179,89 +116,69 @@
               <p>$999.99</p>
             </div>
           </article>
-        </div>
-        <!-- view all button -->
-        <div class="view-all-container">
-          <a href="#" class="view-all">View All</a>
-        </div>
-      </section>
 
-
-      <!-- New Arrivals Section -->
-      <section class="new-arrivals">
-        <h2>New Arrivals</h2>
-        <div class="tabs">
-          <button class="tab active" onclick="showProducts('Indie')">
-            Indie
-          </button>
-          <button class="tab" onclick="showProducts('category2')">
-            CategoryTwo
-          </button>
-          <button class="tab" onclick="showProducts('category3')">
-            CategoryThree
-          </button>
-        </div>
-        <!-- Indie Category in the tabs with id="indie"-->
-        <div id="Indie" class="product-list active">
+          <!-- Third row of products -->
           <article class="product">
-            <img src="images/products/daniel-caesar-never-enough.jpg" alt="Category Indie Daniel Caesar">
+            <img src="placeholder.png" alt="Product Image">
             <div class="product-info">
-              <h3>Daniel Caesar - Never Enough</h3>
+              <h3>Name of Product</h3>
               <p>In Stock</p>
-              <p>$59.99 SGD</p>
+              <p>$999.99</p>
             </div>
           </article>
-          <!-- Additional products for CategoryOne -->
-        </div>
-        <div id="category2" class="product-list">
           <article class="product">
             <img src="placeholder.png" alt="Product Image">
-            <h3>Product 2</h3>
-            <p>$899.99</p>
-            <p>In Stock</p>
+            <div class="product-info">
+              <h3>Name of Product</h3>
+              <p>In Stock</p>
+              <p>$999.99</p>
+            </div>
           </article>
-          <!-- Additional products for CategoryTwo -->
-        </div>
-        <div id="category3" class="product-list">
           <article class="product">
             <img src="placeholder.png" alt="Product Image">
-            <h3>Product 3</h3>
-            <p>$799.99</p>
-            <p>In Stock</p>
+            <div class="product-info">
+              <h3>Name of Product</h3>
+              <p>In Stock</p>
+              <p>$999.99</p>
+            </div>
           </article>
-          <!-- Additional products for CategoryThree -->
+          <article class="product">
+            <img src="placeholder.png" alt="Product Image">
+            <div class="product-info">
+              <h3>Name of Product</h3>
+              <p>In Stock</p>
+              <p>$999.99</p>
+            </div>
+          </article>
         </div>
       </section>
 
-      <!-- Featured Music Video Section -->
-      <section class="featured" id="featured"> <!-- Links from the hero section carousel -->
-        <h2>Watch Featured Artist MV</h2>
-        <div class="responsive-video">
-          <!-- Had to find an alternative video due to copyright & licensing issues and embedd restrictions -->
-            <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/_AyYn2g1ndY?si=FGLxjr0bR6-2pJi0" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-        </div>
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="page-number" data-page="prev">&lt;</a>
+            <a href="#" class="page-number active" data-page="1">1</a>
+            <a href="#" class="page-number" data-page="2">2</a>
+            <a href="#" class="page-number" data-page="ellipsis">...</a>
+            <a href="#" class="page-number" data-page="9">9</a>
+            <a href="#" class="page-number" data-page="10">10</a>
+            <a href="#" class="page-number" data-page="next">&gt;</a>
+          </div>          
       </section>
     </main>
 
     <!-- Newsletter Signup -->
     <section class="newsletter">
-      <h3>Join Our Newsletter</h3>
-      <form>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
+        <h3>Join Our Newsletter</h3>
+        <form>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
 
    <!-- Footer section start -->
     <footer>
@@ -302,7 +219,6 @@
         </ul>
       </section>
       <p>&copy; VoyageVinyl. All rights reserved.</p>
-      <!-- Footer social media icons-->
       <div class="social-media">
         <ul>
           <li>
@@ -327,18 +243,6 @@
 
     <!-- Back to Top Button -->
     <button id="back-to-top" aria-label="Back to Top">^</button>
-    <!-- using a simple ^ to avoid SVG -->
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-K35FMWCH"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Linking to external javascript -->
     <script src="js/script.js"></script>

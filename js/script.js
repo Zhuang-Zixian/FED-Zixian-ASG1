@@ -149,15 +149,18 @@ window.onload = function () {
     document.getElementById("popup").classList.remove("show");
   }
 
+
   // Toggle Hamburger Menu for mobile/tablet view ports
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
-  
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  });
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    }
+});
 
 
 // Back to Top Button Functionality
@@ -211,3 +214,34 @@ document.addEventListener("DOMContentLoaded", function () {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  // store.html pagination function
+  document.addEventListener("DOMContentLoaded", function () {
+    const paginationLinks = document.querySelectorAll(".page-number");
+  
+    paginationLinks.forEach(link => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent actual navigation
+  
+        // Remove the 'active' class from all links
+        paginationLinks.forEach(link => link.classList.remove("active"));
+  
+        // Add the 'active' class to the clicked link, if not a disabled/ellipsis button
+        if (!this.classList.contains("disabled") && !this.dataset.page.includes("ellipsis")) {
+          this.classList.add("active");
+        }
+      });
+    });
+  });
+
+  // store.html disable error popup for email address in the fake search bar
+  document.querySelector(".search-bar").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the form from being submitted
+  });
+
+  document.querySelector(".search-bar").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent the Enter key from triggering form submission
+      // works so the form doesn't trigger the JS form validation that requires a valid email addr
+    }
+  });

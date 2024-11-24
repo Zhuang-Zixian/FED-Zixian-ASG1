@@ -54,6 +54,7 @@ header {
 
 /* Navigation Links */
 .nav-links {
+    z-index: 999; /*ensuring that other elements do not overlap*/
     list-style: none;
     display: flex;
     gap: 20px;
@@ -73,6 +74,8 @@ header {
 
 /* Hamburger Menu */
 .hamburger {
+    z-index: 1000; /*ensuring that other elements do not overlap*/
+    position: relative;
     display: none; /* Hidden by default */
     flex-direction: column;
     justify-content: space-between;
@@ -681,3 +684,90 @@ footer p {
     color: white;
 }
 /* end of Back to Top Button */
+
+/*--------------------------------- STORE.HTML additional CSS ----------------------------------*/
+
+/* Store.html pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Spacing between pagination buttons */
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Button sizes */
+    height: 40px;
+    text-decoration: none;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; 
+    background-color: white; 
+    color: #333; /* text color */
+    font-weight: 500;
+    transition: all 0.3s ease; /* hover effect */
+}
+
+.page-number:hover {
+    background-color: #f0f0f0; /* Slight background highlight on hover */
+    border-color: #bbb; /* Darker border on hover */
+}
+
+.page-number.active {
+    border: 2px solid #f39c12; /*2 pixel border for button colour*/
+    font-weight: 600; 
+    color: #f39c12; /*individual pagination button text colour*/
+    background-color: white; 
+}
+
+/* Chevron Button Styling */
+.page-number:first-of-type,
+.page-number:last-of-type {
+    background-color: #333; /* Colour for navigation arrows bg*/
+    color: #fff; /*chevrons navigation colour */
+    border: none;
+}
+
+.page-number:first-of-type:hover,
+.page-number:last-of-type:hover {
+    background-color: #ccc; /* Slightly darker hover effect */
+}
+/* end of Pagination Styling */
+
+/* Store.html page "fake search bar" CSS */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin-bottom: 40px; /* Add spacing below the row */
+  }
+  
+  .header-row h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .search-bar {
+    display: flex;
+  }
+  
+  .search-bar input {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px; /* Adjust width as necessary */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #f39c12; /* Highlight on focus */
+  }
+/* end of "fake search bar" input css */  
