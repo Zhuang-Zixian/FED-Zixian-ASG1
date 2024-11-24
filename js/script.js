@@ -203,5 +203,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById(category).classList.add("active");
   }
   
-  
-  
+  // Function for scrollToSection within a page
+  // Used in Hero Section -> MV Section
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }

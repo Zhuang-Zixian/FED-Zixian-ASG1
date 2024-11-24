@@ -60,7 +60,7 @@
         <div class="logo">
           <a href="index.html" onclick="return false;"> 
             <!-- onclick return false to prevent popup to keep showing up -->
-            <img src="images/VoyageVinyl-Logo.png" alt="Company Logo">
+            <img src="images/voyagevinyl-logo.png" alt="Company Logo">
             <strong>VoyageVinyl</strong>
           </a>
         </div>
@@ -84,13 +84,13 @@
       <h2 class="visually-hidden">Hero Carousel</h2> <!-- Hidden heading for accessibility for semantics -->
       <div class="carousel">
         <div class="carousel-slide">
-          <img src="images/Hero-Section-1.png" alt="Voyage Vinyl Opening Sale">
+          <img src="images/hero-section-images/hero-section-1.png" alt="Voyage Vinyl Opening Sale">
         </div>
         <div class="carousel-slide">
-          <img src="images/Hero-Section-2.png" alt="Kpop Vinyl Records">
+          <img src="images/hero-section-images/hero-section-2.png" alt="Kpop Vinyl Records">
         </div>
-        <div class="carousel-slide">
-          <img src="images/Hero-Section-3.png" alt="Daniel Caesar MV Promotion">
+        <div class="carousel-slide" onclick="scrollToSection('featured')"> <!-- Lead to MV section -->
+          <img src="images/hero-section-images/hero-section-3.png" alt="Daniel Caesar MV Promotion">
         </div>
       </div>
       <!-- Navigation Arrows using chevrons-->
@@ -114,7 +114,7 @@
         <div class="product-list">
           <!-- First row of products -->
           <article class="product">
-            <img src="images/daniel-caesar-never-enough.jpg" alt="Daniel Caesar Never Enough LP">
+            <img src="images/products/daniel-caesar-never-enough.jpg" alt="Daniel Caesar Never Enough LP">
             <div class="product-info">
               <h3>Daniel Caesar - Never Enough</h3>
               <p>In Stock</p>
@@ -122,7 +122,7 @@
             </div>
           </article>
           <article class="product">
-            <img src="images/1975-Album.jpg" alt="1975 Being Funny In a Foreign Language LP">
+            <img src="images/products/1975-album.jpg" alt="1975 Being Funny In a Foreign Language LP">
             <div class="product-info">
               <h3>1975 - About You (Clear Vinyl LP)</h3>
               <p>In Stock</p>
@@ -201,9 +201,10 @@
             CategoryThree
           </button>
         </div>
+        <!-- Indie Category in the tabs with id="indie"-->
         <div id="Indie" class="product-list active">
           <article class="product">
-            <img src="images/daniel-caesar-never-enough.jpg" alt="Category Indie Daniel Caesar">
+            <img src="images/products/daniel-caesar-never-enough.jpg" alt="Category Indie Daniel Caesar">
             <div class="product-info">
               <h3>Daniel Caesar - Never Enough</h3>
               <p>In Stock</p>
@@ -233,7 +234,7 @@
       </section>
 
       <!-- Featured Music Video Section -->
-      <section class="featured">
+      <section class="featured" id="featured"> <!-- Links from the hero section carousel -->
         <h2>Watch Featured Artist MV</h2>
         <div class="responsive-video">
           <!-- Had to find an alternative video due to copyright & licensing issues and embedd restrictions -->
@@ -246,25 +247,34 @@
           </iframe>
         </div>
       </section>
-
-      <!-- Newsletter Signup -->
-      <section class="newsletter">
-        <h2>Newsletter Signup</h2>
-        <form>
-          <label for="email">Email Address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required>
-          <button type="submit">Signup</button>
-        </form>
-      </section>
     </main>
 
-    <!-- Footer section start -->
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h3>Join Our Newsletter</h3>
+      <form>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+   <!-- Footer section start -->
     <footer>
+      <section class="voyagevinyl">
+        <h2>VoyageVinyl</h2>
+        <address>
+          535 Clementi Road,<br>
+          Singapore 599489<br>
+          <br>
+          Mon-Fri: 10am - 8pm,<br>
+          Sat-Sun: 11am - 6pm
+        </address>
+      </section>
       <section class="about">
         <h2>About</h2>
         <ul>
@@ -275,10 +285,12 @@
       </section>
       <section class="contact">
         <h2>Contact</h2>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
         <address>
-          #2 Ang Mo Kio Dr,<br>
-          ITE College Central<br>
-          Singapore 567720
+          contact@voyagevinyl.com<br>
+          +65 6460 6999<br>
         </address>
       </section>
       <section class="others">
@@ -290,6 +302,26 @@
         </ul>
       </section>
       <p>&copy; VoyageVinyl. All rights reserved.</p>
+      <!-- Footer social media icons-->
+      <div class="social-media">
+        <ul>
+          <li>
+            <a href="#" aria-label="Tiktok">
+              <img src="images/social-media/tiktok-icon.png" alt="Tiktok Icon">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <img src="images/social-media/instagram-icon.png" alt="Instagram Icon">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube">
+              <img src="images/social-media/youtube-icon.png" alt="YouTube Icon">
+            </a>
+          </li>
+        </ul>
+      </div>      
     </footer>
     <!-- Footer section end -->
 
