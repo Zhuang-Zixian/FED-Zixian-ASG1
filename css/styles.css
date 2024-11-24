@@ -1,4 +1,5 @@
 /* General Styling */
+/* Avoid using unless necessary causes weird bugs if used wrongly*/
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -7,14 +8,11 @@ body {
     color: #333;
 }
 
-header {
+/* start of Navbar Styling */
+.navbar {
     background-color: #222;
     color: white;
     padding: 15px 20px;
-}
-
-/* start of Navbar Styling */
-.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -771,3 +769,199 @@ footer p {
     border-color: #f39c12; /* Highlight on focus */
   }
 /* end of "fake search bar" input css */  
+
+
+/*--------------------------------- PRODUCT.HTML additional CSS ----------------------------------*/
+
+/* allows products in index,store to click into the product.html */
+.product-link {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+  .product-link:hover {
+    transform: scale(1.02); /* Slight zoom on hover for visual feedback */
+    transition: transform 0.2s ease;
+  }
+
+/*--------- Product,About Product Section under <main> tag -----------*/
+/* Main container for the product page */
+.product-page {
+    display: flex;
+    gap: 30px; /* Space between image and details */
+    padding: 20px;
+    margin-bottom: 40px; /* Space between product section and next section */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping for mobile */
+}
+
+/* Product Image Styling */
+.product-image {
+    flex: 1;
+    max-width: 50%; /* Keeps the image proportionate on larger screens */
+    min-width: 300px; /* Minimum size for smaller screens */
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-image figcaption {
+    margin-top: 10px;
+    text-align: center; /*left align the caption for better aesthetics*/
+    font-size: 0.9rem;
+    color: #777;
+}
+
+
+/* Product Details Section */
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between sections */
+    min-width: 300px; /* Minimum width on smaller screens */
+}
+
+.product-details header h1 {
+    font-size: 1.5rem; /* Font size for product name */
+    font-weight: bold;
+    color: #222;
+    margin: 10px 0 0 0; /* Add top margin to push the name down slightly */
+    padding: 0;
+}
+
+.short-description {
+    font-size: 1rem;
+    color: #555;
+    margin: 0; /* Remove unnecessary margin */
+}
+
+.artist-details {
+    font-size: 1rem;
+    color: #666;
+    margin: 0; /* Remove unnecessary margin */
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+    margin: 0; /* Remove unnecessary margin */
+}
+
+/* Quantity Selector */
+.quantity-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quantity-selector label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0; /* Remove unnecessary margin */
+}
+
+/* Adding to Cart Button*/
+.add-to-cart {
+    margin-top: 20px;
+    text-align: left; 
+}
+
+.add-to-cart-btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+
+/* About Product Section */
+.about-product {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.about-product header h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 10px 0; /* Add bottom margin for spacing */
+    color: #333;
+}
+
+.about-product p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-page {
+        flex-direction: column; /* Stack image and details vertically */
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .product-image {
+        max-width: 100%; /* Image takes full width */
+    }
+
+    .product-details {
+        max-width: 100%; /* Details take full width */
+    }
+
+    .product-details header h1 {
+        font-size: 1.4rem; /* Slightly smaller font size */
+    }
+
+    .quantity button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .quantity input {
+        font-size: 1rem;
+        width: 45px;
+    }
+
+    .about-product header h2 {
+        font-size: 1.1rem;
+    }
+}
+
+
+  
+  
+  

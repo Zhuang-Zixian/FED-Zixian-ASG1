@@ -114,12 +114,15 @@
         <div class="product-list">
           <!-- First row of products -->
           <article class="product">
+            <!-- Wrap with anchor tag to redirect user to product.html-->
+            <a href="product.html" class="product-link">
             <img src="images/products/daniel-caesar-never-enough.jpg" alt="Daniel Caesar Never Enough LP">
             <div class="product-info">
               <h3>Daniel Caesar - Never Enough</h3>
               <p>In Stock</p>
               <p>$59.99 SGD</p>
             </div>
+            </a>
           </article>
           <article class="product">
             <img src="images/products/1975-album.jpg" alt="1975 Being Funny In a Foreign Language LP">
@@ -216,18 +219,22 @@
         <div id="category2" class="product-list">
           <article class="product">
             <img src="placeholder.png" alt="Product Image">
-            <h3>Product 2</h3>
-            <p>$899.99</p>
-            <p>In Stock</p>
+            <div class="product-info">
+              <h3>Product 2</h3>
+              <p>$899.99</p>
+              <p>In Stock</p>
+            </div>
           </article>
           <!-- Additional products for CategoryTwo -->
         </div>
         <div id="category3" class="product-list">
           <article class="product">
             <img src="placeholder.png" alt="Product Image">
-            <h3>Product 3</h3>
-            <p>$799.99</p>
-            <p>In Stock</p>
+            <div class="product-info">
+              <h3>Product 3</h3>
+              <p>$799.99</p>
+              <p>In Stock</p>
+            </div>
           </article>
           <!-- Additional products for CategoryThree -->
         </div>
@@ -306,17 +313,18 @@
       <div class="social-media">
         <ul>
           <li>
-            <a href="#" aria-label="Tiktok">
+            <!-- rel="noopner noreferrer" is a security feature-->
+            <a href="https://www.tiktok.com/@voyagevinyl" aria-label="Tiktok" target="_blank" rel="noopener noreferrer">
               <img src="images/social-media/tiktok-icon.png" alt="Tiktok Icon">
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/?hl=en" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <img src="images/social-media/instagram-icon.png" alt="Instagram Icon">
             </a>
           </li>
           <li>
-            <a href="#" aria-label="YouTube">
+            <a href="https://www.youtube.com/@voyagevinyl" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
               <img src="images/social-media/youtube-icon.png" alt="YouTube Icon">
             </a>
           </li>

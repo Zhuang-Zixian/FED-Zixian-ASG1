@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - VoyageVinyl</title>
+    <!-- Poppins font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet">
+    <!-- CSS Linking -->
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+     <!-- Header section-->
+     <header>
+        <nav class="navbar">
+          <div class="logo">
+            <a href="index.html"> 
+              <img src="images/voyagevinyl-logo.png" alt="Company Logo">
+              <strong>VoyageVinyl</strong>
+            </a>
+          </div>
+          <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="#">My Cart</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- End of header section -->
+
+      <!-- Main Product section -->
+      <main>
+        <section class="product-page">
+            <!-- Image Section -->
+            <figure class="product-image">
+                <img src="images/products/daniel-caesar-never-enough.jpg" alt="Daniel Caesar - Never Enough Vinyl LP">
+                <figcaption>Product image for Daniel Caesar - Never Enough Vinyl LP</figcaption>
+            </figure>
+            
+            <!-- Product Details -->
+            <article class="product-details">
+                <header>
+                    <h1>Daniel Caesar<br>
+                    Never Enough (Vinyl 2LP)</h1>
+                </header>
+                <p class="short-description">Short description.. lorem lorem lorem</p>
+                <p class="artist-details">Artist Name + Artist Company Label Name</p>
+                <p class="price">$59.99 SGD</p>
+    
+                <!-- Quantity Selector -->
+                <form class="quantity-selector" aria-label="Quantity Selector">
+                    <label for="quantity">Choose Quantity:</label>
+                    <div class="quantity">
+                        <input type="number" id="quantity" value="0" min="0" aria-live="polite">
+                    </div>
+                </form>
+
+                <!-- Add to Cart Section -->
+                <div class="add-to-cart">
+                    <button id="addToCart" class="add-to-cart-btn">Add to Cart</button>
+                    <p id="cartMessage" class="cart-message"></p>
+                </div>
+    
+                <!-- About Product -->
+                <div class="about-product">
+                    <header>
+                        <h2>About Product</h2>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, purus eu malesuada convallis, sapien ligula tempor ligula, a ultricies lorem justo nec risus.</p>
+                    <p>Fusce vel dui a metus eleifend fermentum eget nec erat. Aenean volutpat tellus et nisi dapibus, in efficitur purus sollicitudin.</p>
+                </div>
+            </article>
+        </section>
+          
+         <!-- Featured Music Video Section -->
+        <section class="featured">
+            <h2>Watch Never Enough MV</h2>
+            <div class="responsive-video">
+                <!-- Had to find an alternative video due to copyright & licensing issues and embedd restrictions -->
+                <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/_AyYn2g1ndY?si=FGLxjr0bR6-2pJi0" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+            </div>
+        </section>
+      </main>
+      
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <h3>Join Our Newsletter</h3>
+        <form>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      <!-- Footer section start -->
+    <footer>
+        <section class="voyagevinyl">
+          <h2>VoyageVinyl</h2>
+          <address>
+            535 Clementi Road,<br>
+            Singapore 599489<br>
+            <br>
+            Mon-Fri: 10am - 8pm,<br>
+            Sat-Sun: 11am - 6pm
+          </address>
+        </section>
+        <section class="about">
+          <h2>About</h2>
+          <ul>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Store Locations</a></li>
+          </ul>
+        </section>
+        <section class="contact">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <address>
+            contact@voyagevinyl.com<br>
+            +65 6460 6999<br>
+          </address>
+        </section>
+        <section class="others">
+          <h2>Others</h2>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Deliveries</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </section>
+        <p>&copy; VoyageVinyl. All rights reserved.</p>
+        <!-- Footer social media icons-->
+        <div class="social-media">
+          <ul>
+            <li>
+              <!-- rel="noopner noreferrer" is a security feature-->
+              <a href="https://www.tiktok.com/@voyagevinyl" aria-label="Tiktok" target="_blank" rel="noopener noreferrer">
+                <img src="images/social-media/tiktok-icon.png" alt="Tiktok Icon">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/?hl=en" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <img src="images/social-media/instagram-icon.png" alt="Instagram Icon">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@voyagevinyl" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                <img src="images/social-media/youtube-icon.png" alt="YouTube Icon">
+              </a>
+            </li>
+          </ul>
+        </div>      
+      </footer>
+      <!-- Footer section end -->
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">^</button>
+
+    <!-- Linking to external javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

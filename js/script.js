@@ -121,13 +121,14 @@ navLinks.forEach((link) => {
   }
 });
 
+
 /* Product Click Placeholder */
 // Add click events to products for potential expansion
-document.querySelectorAll(".product").forEach((product) => {
-  product.addEventListener("click", () => {
-    alert("Product details coming soon!"); // Placeholder action
-  });
-});
+//document.querySelectorAll(".product").forEach((product) => {
+//  product.addEventListener("click", () => {
+//    alert("Product details coming soon!"); // Placeholder action
+//  });
+//});
 
 /* Featured Video Alert */
 // Display an alert when a user interacts with the featured video
@@ -245,3 +246,5 @@ document.addEventListener("DOMContentLoaded", function () {
       // works so the form doesn't trigger the JS form validation that requires a valid email addr
     }
   });
+
+
