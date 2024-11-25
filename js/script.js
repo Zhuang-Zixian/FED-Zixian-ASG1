@@ -35,64 +35,69 @@ function closePopup() {
 
 // Image carousell functionality including indicators and buttons
 document.addEventListener("DOMContentLoaded", function () {
+  // Check if the current page is index.html and only runs on the index.html page
+  if (window.location.pathname.endsWith("index.html")) {
     const carousel = document.querySelector(".carousel");
     const slides = document.querySelectorAll(".carousel-slide");
     const indicators = document.querySelectorAll(".indicator");
     const prevButton = document.querySelector(".carousel-prev");
     const nextButton = document.querySelector(".carousel-next");
-    const totalSlides = slides.length;
-  
-    let currentSlide = 0;
-  
-    // Function to update carousel position and active indicator
-    function updateCarousel() {
-      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-      indicators.forEach((indicator, index) => {
-        indicator.classList.toggle("active", index === currentSlide);
-      });
-    }
-  
-    // Show next slide
-    function showNextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateCarousel();
-    }
-  
-    // Show previous slide
-    function showPrevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateCarousel();
-    }
-  
-    // Auto-slide every 4 seconds
-    let autoSlide = setInterval(showNextSlide, 4000);
-  
-    // Event listeners for navigation arrows
-    prevButton.addEventListener("click", function () {
-      clearInterval(autoSlide); // Stop auto-slide on manual interaction
-      showPrevSlide();
-      autoSlide = setInterval(showNextSlide, 4000); // Restart auto-slide
-    });
-  
-    nextButton.addEventListener("click", function () {
-      clearInterval(autoSlide); // Stop auto-slide on manual interaction
-      showNextSlide();
-      autoSlide = setInterval(showNextSlide, 4000); // Restart auto-slide
-    });
-  
-    // Event listeners for circle indicators
-    indicators.forEach((indicator, index) => {
-      indicator.addEventListener("click", function () {
-        clearInterval(autoSlide); // Stop auto-slide on manual interaction
-        currentSlide = index;
+
+    if (carousel && slides.length > 0) {
+      let currentSlide = 0;
+
+      // Function to update carousel position and active indicator
+      function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle("active", index === currentSlide);
+        });
+      }
+
+      // Show next slide
+      function showNextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
         updateCarousel();
+      }
+
+      // Show previous slide
+      function showPrevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateCarousel();
+      }
+
+      // Auto-slide every 4 seconds
+      let autoSlide = setInterval(showNextSlide, 4000);
+
+      // Event listeners for navigation arrows
+      prevButton.addEventListener("click", function () {
+        clearInterval(autoSlide); // Stop auto-slide on manual interaction
+        showPrevSlide();
         autoSlide = setInterval(showNextSlide, 4000); // Restart auto-slide
       });
-    });
-  
-    // Initialise carousel
-    updateCarousel();
-  });
+
+      nextButton.addEventListener("click", function () {
+        clearInterval(autoSlide); // Stop auto-slide on manual interaction
+        showNextSlide();
+        autoSlide = setInterval(showNextSlide, 4000); // Restart auto-slide
+      });
+
+      // Event listeners for circle indicators
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", function () {
+          clearInterval(autoSlide); // Stop auto-slide on manual interaction
+          currentSlide = index;
+          updateCarousel();
+          autoSlide = setInterval(showNextSlide, 4000); // Restart auto-slide
+        });
+      });
+
+      // Initialise carousel
+      updateCarousel();
+    }
+  }
+});
+
     
 /* Newsletter Signup Form Validation */
 document.addEventListener("DOMContentLoaded", function () {
@@ -142,7 +147,10 @@ if (featuredVideo) {
 /* Index.html popup for reducing CTR -> click through rate */
 // Show the popup when the page loads
 window.onload = function () {
-    document.getElementById("popup").classList.add("show");
+    // stops the errors from javascript not being able to run popups in other html pages
+    if (window.location.pathname.endsWith("index.html")) {
+      document.getElementById("popup").classList.add("show");
+    }
   };
   
   // Function to close the popup
@@ -236,15 +244,67 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // store.html disable error popup for email address in the fake search bar
-  document.querySelector(".search-bar").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the form from being submitted
-  });
-
-  document.querySelector(".search-bar").addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      e.preventDefault(); // Prevent the Enter key from triggering form submission
-      // works so the form doesn't trigger the JS form validation that requires a valid email addr
+  document.addEventListener("DOMContentLoaded", function () {
+    // Check if the current page is store.html
+    if (window.location.pathname.endsWith("store.html")) {
+      const searchBar = document.querySelector(".search-bar");
+  
+      if (searchBar) {
+        // Prevent the form from being submitted
+        searchBar.addEventListener("submit", function (e) {
+          e.preventDefault();
+        });
+  
+        // Prevent the Enter key from triggering form submission
+        searchBar.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") {
+            e.preventDefault();
+          }
+        });
+      }
     }
   });
+
+  // product.html allowing the user to zoom into the image
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-image");
+    const productImg = document.getElementById("product-image");
+    const closeModal = document.querySelector(".close-modal");
+
+    // Function to disable scrolling 
+    // when the user is inside the modal disable scrolling
+    function disableScrolling() {
+        document.body.style.overflow = "hidden";
+    }
+
+    // Function to enable scrolling
+    function enableScrolling() {
+        document.body.style.overflow = "auto";
+    }
+
+    // Open modal when the product image is clicked
+    productImg.addEventListener("click", function () {
+        modal.style.display = "flex"; // Show modal
+        modalImg.src = this.src; // Set modal image source
+        disableScrolling(); // Disable scrolling
+    });
+
+    // Close modal when the close button is clicked
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none"; // Hide modal
+        enableScrolling(); // Enable scrolling
+    });
+
+    // Close modal when clicking outside the modal content
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none"; // Hide modal
+            enableScrolling(); // Enable scrolling
+        }
+    });
+});
+
+
 
 

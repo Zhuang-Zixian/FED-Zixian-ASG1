@@ -43,9 +43,17 @@
         <section class="product-page">
             <!-- Image Section -->
             <figure class="product-image">
-                <img src="images/products/daniel-caesar-never-enough.jpg" alt="Daniel Caesar - Never Enough Vinyl LP">
-                <figcaption>Product image for Daniel Caesar - Never Enough Vinyl LP</figcaption>
-            </figure>
+              <img id="product-image" src="images/products/daniel-caesar-never-enough.jpg" alt="Daniel Caesar - Never Enough Vinyl LP">
+              <figcaption>Product image for Daniel Caesar - Never Enough Vinyl LP</figcaption>
+          </figure>
+
+           <!-- Image Lightbox Modal -->
+            <div id="image-modal" class="image-modal">
+              <span class="close-modal">&times;</span>
+              <div class="modal-content">
+                  <img id="modal-image" src="images/products/daniel-caesar-never-enough.jpg" alt="enlarged product img">
+              </div>
+            </div>
             
             <!-- Product Details -->
             <article class="product-details">
@@ -53,8 +61,13 @@
                     <h1>Daniel Caesar<br>
                     Never Enough (Vinyl 2LP)</h1>
                 </header>
-                <p class="short-description">Short description.. lorem lorem lorem</p>
-                <p class="artist-details">Artist Name + Artist Company Label Name</p>
+                <!-- Combining SKU, Artist and Label into one <p> to save CSS-->
+                <p class="short-description">
+                  Artist: Daniel Caesar<br>
+                  Label: Republic Records<br>
+                  SKU: DC-NEV-2LP-0012
+                </p>
+                <!-- price of album -->
                 <p class="price">$59.99 SGD</p>
     
                 <!-- Quantity Selector -->
@@ -76,8 +89,8 @@
                     <header>
                         <h2>About Product</h2>
                     </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, purus eu malesuada convallis, sapien ligula tempor ligula, a ultricies lorem justo nec risus.</p>
-                    <p>Fusce vel dui a metus eleifend fermentum eget nec erat. Aenean volutpat tellus et nisi dapibus, in efficitur purus sollicitudin.</p>
+                    <p>Daniel Caesar's Never Enough is a soulful exploration of emotion and connection, blending smooth R&B with heartfelt lyrics.</p>
+                    <p>With its rich production and Caesar's signature vocal style, this 2LP vinyl set delivers an immersive listening experience..</p>
                 </div>
             </article>
         </section>
