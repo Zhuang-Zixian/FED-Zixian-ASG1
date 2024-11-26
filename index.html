@@ -83,7 +83,7 @@
     <section class="hero-carousel">
       <h2 class="visually-hidden">Hero Carousel</h2> <!-- Hidden heading for accessibility for semantics -->
       <div class="carousel">
-        <div class="carousel-slide">
+        <div class="carousel-slide" onclick="scrollToSection('scrollto-top-sellers')">
           <img src="images/hero-section-images/hero-section-1.png" alt="Voyage Vinyl Opening Sale">
         </div>
         <div class="carousel-slide">
@@ -109,7 +109,7 @@
 
     <main>
       <!-- Top Sellers Section -->
-      <section class="top-sellers">
+      <section class="top-sellers" id="scrollto-top-sellers"> <!-- id to link scroll to from carousel-->
         <h2>Top Sellers</h2>
         <div class="product-list">
           <!-- First row of products -->
@@ -197,11 +197,11 @@
           <button class="tab active" onclick="showProducts('Indie')">
             Indie
           </button>
-          <button class="tab" onclick="showProducts('category2')">
-            CategoryTwo
+          <button class="tab" onclick="showProducts('Kpop')">
+            Kpop
           </button>
-          <button class="tab" onclick="showProducts('category3')">
-            CategoryThree
+          <button class="tab" onclick="showProducts('Rock')">
+            Rock
           </button>
         </div>
         <!-- Indie Category in the tabs with id="indie"-->
@@ -214,29 +214,46 @@
               <p>$59.99 SGD</p>
             </div>
           </article>
-          <!-- Additional products for CategoryOne -->
+
+          <!-- Products for Kpop -->
         </div>
-        <div id="category2" class="product-list">
+        <div id="Kpop" class="product-list">
           <article class="product">
-            <img src="placeholder.png" alt="Product Image">
+            <img src="images/products/ive-i-am.jpg" alt="I've IVE">
             <div class="product-info">
-              <h3>Product 2</h3>
-              <p>$899.99</p>
+              <h3>IVE - I've IVE</h3>
               <p>In Stock</p>
+              <p>$64.00 SGD</p>
             </div>
           </article>
-          <!-- Additional products for CategoryTwo -->
-        </div>
-        <div id="category3" class="product-list">
           <article class="product">
-            <img src="placeholder.png" alt="Product Image">
+            <img src="images/products/aespa.jpg" alt="Dreams Come True">
             <div class="product-info">
-              <h3>Product 3</h3>
-              <p>$799.99</p>
+              <h3>aespa - Dreams Come True</h3>
               <p>In Stock</p>
+              <p>$66.00 SGD</p>
             </div>
           </article>
-          <!-- Additional products for CategoryThree -->
+          <article class="product">
+            <img src="images/products/twice.jpg" alt="Twice Pink">
+            <div class="product-info">
+              <h3>Twice - (Pink Vinyl)</h3>
+              <p>In Stock</p>
+              <p>$64.00 SGD</p>
+            </div>
+          </article>
+
+          <!-- products for Rock -->
+        </div>
+        <div id="Rock" class="product-list">
+          <article class="product">
+            <img src="images/products/arctic-monkeys-AM.jpg" alt="AM">
+            <div class="product-info">
+              <h3>Arctic Monkeys - AM (Vinyl LP)</h3>
+              <p>In Stock</p>
+              <p>$52.00 SGD</p>
+            </div>
+          </article>
         </div>
       </section>
 
