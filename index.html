@@ -72,8 +72,8 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="store.html">Store</a></li>
-          <li><a href="#">My Cart</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="cart.html">My Cart</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -86,7 +86,7 @@
         <div class="carousel-slide" onclick="scrollToSection('scrollto-top-sellers')">
           <img src="images/hero-section-images/hero-section-1.png" alt="Voyage Vinyl Opening Sale">
         </div>
-        <div class="carousel-slide">
+        <div class="carousel-slide" onclick="scrollToSection('scrollto-new-arrivals')">
           <img src="images/hero-section-images/hero-section-2.png" alt="Kpop Vinyl Records">
         </div>
         <div class="carousel-slide" onclick="scrollToSection('featured')"> <!-- Lead to MV section -->
@@ -191,7 +191,7 @@
 
 
       <!-- New Arrivals Section -->
-      <section class="new-arrivals">
+      <section class="new-arrivals" id="scrollto-new-arrivals">
         <h2>New Arrivals</h2>
         <div class="tabs">
           <button class="tab active" onclick="showProducts('Indie')">
@@ -214,9 +214,9 @@
               <p>$59.99 SGD</p>
             </div>
           </article>
-
-          <!-- Products for Kpop -->
         </div>
+
+        <!-- Products for Kpop -->
         <div id="Kpop" class="product-list">
           <article class="product">
             <img src="images/products/ive-i-am.jpg" alt="I've IVE">

@@ -267,6 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // product.html allowing the user to zoom into the image
   document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname.endsWith("product.html")) {
     const modal = document.getElementById("image-modal");
     const modalImg = document.getElementById("modal-image");
     const productImg = document.getElementById("product-image");
@@ -303,6 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
             enableScrolling(); // Enable scrolling
         }
     });
+  }
 });
 
 
