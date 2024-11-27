@@ -40,70 +40,59 @@
 
     <!-- Main Shopping Cart Section -->
     <main>
-        <section class="shopping-cart">
-            <h1>Your Shopping Cart:</h1>
-            <hr>
-            <!-- First Product Row -->
-            <div class="cart-item">
-                <div class="product-image">
-                    <img src="images/products/daniel-caesar-never-enough.jpg" alt="Product Image">
-                </div>
-                <div class="product-details">
-                    <p><strong>Product SKU:</strong> VY923123123</p>
-                    <h2>Product Name</h2>
-                    <p>Album Name</p>
-                    <p>DD/MM/YY</p>
-                    <input type="text" placeholder="Enter Discount Code">
-                </div>
-                <div class="product-quantity">
-                    <label for="quantity-1">Choose Quantity:</label>
-                    <input type="number" id="quantity-1" value="1" min="1">
-                </div>
-                <div class="product-price">
-                    <p>Total Price:</p>
-                    <p>$99.99</p>
-                </div>
-                <div class="remove-item">
-                    <button aria-label="Remove Item">X</button>
-                </div>
-            </div>
-
-            <!-- Second Product Row -->
-            <div class="cart-item">
-                <div class="product-image">
-                    <img src="images/products/aespa.jpg" alt="Product Image">
-                </div>
-                <div class="product-details">
-                    <p><strong>Product SKU:</strong> VY782331223</p>
-                    <h2>Product Name</h2>
-                    <p>Album Name</p>
-                    <p>DD/MM/YY</p>
-                    <input type="text" placeholder="Enter Discount Code">
-                </div>
-                <div class="product-quantity">
-                    <label for="quantity-2">Choose Quantity:</label>
-                    <input type="number" id="quantity-2" value="1" min="1">
-                </div>
-                <div class="product-price">
-                    <p>Total Price:</p>
-                    <p>$99.99</p>
-                </div>
-                <div class="remove-item">
-                    <button aria-label="Remove Item">X</button>
-                </div>
-            </div>
-            <hr>
-
-            <!-- Subtotal and Checkout -->
-            <div class="cart-summary">
-                <p><strong>Subtotal:</strong> $199.98 SGD</p>
-                <button class="checkout-button">Checkout</button>
-            </div>
-        </section>
-    </main>
-
-      
-
+      <section class="shopping-cart">
+          <h1>Your Shopping Cart:</h1>
+          <div class="cart-item">
+              <div class="product-image">
+                  <img src="images/products/daniel-caesar-never-enough.jpg" alt="Daniel Caesar - Never Enough">
+              </div>
+              <div class="product-details">
+                  <h2>Daniel Caesar - Never Enough</h2>
+                  <p>Republic Records</p>
+              </div>
+              <div class="product-price">
+                  <p>$59.99 SGD</p>
+              </div>
+              <div class="product-quantity">
+                  <button>-</button>
+                  <input type="number" value="1" min="1">
+                  <button>+</button>
+              </div>
+              <div class="remove-item">
+                  <button aria-label="Remove Item">X</button>
+              </div>
+          </div>
+  
+          <div class="cart-item">
+              <div class="product-image">
+                  <img src="images/products/aespa.jpg" alt="aespa - Dreams Come True">
+              </div>
+              <div class="product-details">
+                  <h2>aespa - Dreams Come True</h2>
+                  <p>SM Entertainment</p>
+              </div>
+              <div class="product-price">
+                  <p>$66.00 SGD</p>
+              </div>
+              <div class="product-quantity">
+                  <button>-</button>
+                  <input type="number" value="1" min="1">
+                  <button>+</button>
+              </div>
+              <div class="remove-item">
+                  <button aria-label="Remove Item">X</button>
+              </div>
+          </div>
+  
+          <div class="cart-summary">
+              <p><strong>Subtotal:</strong> $125.99 SGD</p>
+              <button class="checkout-button">Checkout</button>
+          </div>
+      </section>
+  </main>
+  
+    
+  
 
     <!-- Newsletter Signup -->
     <section class="newsletter">
