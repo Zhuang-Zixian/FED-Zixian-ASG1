@@ -59,9 +59,9 @@
             <input type="text" id="name" placeholder="Full Name" required>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="youremail@example.com" required>
-          </div>
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" placeholder="youremail@example.com" required>
+          </div>  
           <div class="form-group">
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" placeholder="+65 6960 6700" required>
@@ -69,6 +69,7 @@
           <div class="form-group">
             <label for="subject">Select Subject</label>
             <select id="subject" class="form-input-dropdown" required>
+              <option value="" disabled selected>Select a subject</option>
               <option value="general">General Inquiry</option>
               <option value="feedback">Product Feedback</option>
               <option value="others">Others</option>

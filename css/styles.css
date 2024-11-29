@@ -949,7 +949,7 @@ footer p {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px){
     .product-page {
         flex-direction: column; /* Stack image and details vertically */
         gap: 20px; /* Reduce gap for smaller screens */
