@@ -1213,107 +1213,107 @@ footer p {
 
   /*--------------------------------- CONTACT.HTML additional CSS ----------------------------------*/
 
-  .contact-section {
+  /* Full-width map styling */
+.full-width-map iframe {
+    width: 100%; /* Full screen width */
+    height: 400px; /* Increased height */
+    margin-bottom: 20px;
+    padding: 0;
+    border: none;
+}
+
+/* Contact Section Styling */
+.contact-section {
     background-color: #fff;
     padding: 40px 20px;
-    margin: 20px auto;
-    max-width: 1200px;
+    margin: 0 auto;
+    max-width: 600px; /* Center and limit the width of the form */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .contact-form {
-    flex: 1 1 60%;
-  }
-  
-  .contact-details {
-    flex: 1 1 35%;
     text-align: left;
-  }
-  
-  .contact-details h3 {
-    margin-top: 20px;
-    font-size: 1rem;
+}
+
+.contact-section h2 {
+    font-size: 1.5rem;
     color: #333;
-  }
-  
-  .contact-details p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align form center */
+    gap: 20px;
+    margin-bottom: 30px; /* Space after submit button */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    gap: 5px;
+}
+
+label {
     font-size: 0.9rem;
     color: #555;
-    margin: 10px 0;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-  input,
-  textarea {
+}
+
+input,
+textarea,
+select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-  }
-  
-  textarea {
+}
+
+/* Adjust the width of the dropdown specifically */
+select {
+    width: 105%; /* Slightly wider than the inputs */
+}
+
+textarea {
     resize: none;
-  }
-  
-  .btn-submit {
-    background-color: #0044cc;
+}
+
+.btn-submit {
+    width: 100%; /* Full-width button */
+    max-width: 200px; /* Limit button size */
+    margin: 0 auto; /* Center button */
+    background-color: #333;
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-  }
-  
-  .btn-submit:hover {
-    background-color: #003399;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .social-icons a img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s;
-  }
-  
-  .social-icons a img:hover {
-    transform: scale(1.2);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .contact-container {
-      flex-direction: column;
-      gap: 30px;
+}
+
+.btn-submit:hover {
+    background-color: #f39c12;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 15px; /* Reduce padding */
+        max-width: 90%; /* Expand to fit mobile screens */
     }
-  
-    .contact-form,
-    .contact-details {
-      flex: 1 1 100%;
+
+    input,
+    textarea,
+    select {
+        font-size: 0.9rem; /* Slightly smaller inputs */
+        padding: 8px; /* Reduce padding for compact fit */
     }
-  }
+
+    .btn-submit {
+        max-width: 65%; /* Full width on small screens */
+        font-size: 0.9rem; /* Slightly smaller button text */
+    }
+}
+
   
