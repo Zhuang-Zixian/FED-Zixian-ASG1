@@ -38,55 +38,60 @@
     </header>
     <!-- End of header section -->
 
-    <!-- Main Shopping Cart Section -->
-    <main>
-      <section class="contact-section">
-        <h2>Contact Us</h2>
-        <p>Please fill out the quick form and we will be in touch with lightning speed.</p>
-        <div class="contact-container">
-          <!-- Contact Form -->
-          <div class="contact-form">
-            <form>
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" placeholder="Full Name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" placeholder="youremail@example.com" required>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
-              </div>
-              <button type="submit" class="btn-submit">Send</button>
-            </form>
-          </div>
-    
-          <!-- Contact Info -->
-          <div class="contact-details">
-            <h3>SHOP</h3>
-            <p>450A Joo Chiat Road<br>Singapore 427663</p>
-            <h3>WHATSAPP</h3>
-            <p>+65 871-873-70</p>
-            <h3>TELEGRAM</h3>
-            <p>@retrocrates</p>
-            <div class="social-icons">
-              <a href="#"><img src="images/social-media/facebook-icon.png" alt="Facebook"></a>
-              <a href="#"><img src="images/social-media/email-icon.png" alt="Email"></a>
-              <a href="#"><img src="images/social-media/pinterest-icon.png" alt="Pinterest"></a>
+      <!-- Main Shopping Cart Section -->
+       <br>
+      <section class="shopping-cart">
+        <h1>Your Shopping Cart:</h1>
+        <div class="cart-item">
+            <div class="product-image">
+                <img src="images/products/daniel-caesar-never-enough.jpg" alt="Daniel Caesar - Never Enough">
             </div>
-          </div>
+            <div class="product-details">
+                <h2>Daniel Caesar - Never Enough</h2>
+                <p>Republic Records</p>
+            </div>
+            <div class="product-price">
+                <p>$59.99 SGD</p>
+            </div>
+            <div class="product-quantity">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="remove-item">
+                <button aria-label="Remove Item">X</button>
+            </div>
         </div>
-      </section>
-    </main>
-    
-  
 
+        <div class="cart-item">
+            <div class="product-image">
+                <img src="images/products/aespa.jpg" alt="aespa - Dreams Come True">
+            </div>
+            <div class="product-details">
+                <h2>aespa - Dreams Come True</h2>
+                <p>SM Entertainment</p>
+            </div>
+            <div class="product-price">
+                <p>$66.00 SGD</p>
+            </div>
+            <div class="product-quantity">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="remove-item">
+                <button aria-label="Remove Item">X</button>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <p><strong>Subtotal:</strong> $125.99 SGD</p>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </section>
+    <br>
+  </main>
+  
     <!-- Newsletter Signup -->
     <section class="newsletter">
         <h3>Join Our Newsletter</h3>

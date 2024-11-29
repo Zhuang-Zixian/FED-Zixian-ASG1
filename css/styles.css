@@ -273,6 +273,20 @@ main {
     margin-top: 20px;
 }
 
+/* Responsive Design for Tablets */
+@media (max-width: 1024px) {
+    .top-sellers .product-list {
+        grid-template-columns: repeat(3, 1fr); /* 2 products per row on mobile and tablet */
+    }
+    .top-sellers .product img {
+        height: 180px; /* Adjust height for smaller screens */
+    }
+    .product h3 {
+        margin-top: 0px; /* Reduce the gap between the image and title */
+        margin-bottom: 0px; /* Adjust for balance with subsequent elements */
+        font-size: 1.1rem; /* Adjust font size for consistency */
+    }
+}
 
 /* Responsive Design for Top Sellers */
 @media (max-width: 768px) {
@@ -1211,7 +1225,7 @@ footer p {
     }
   }
 
-  /*--------------------------------- CONTACT.HTML additional CSS ----------------------------------*/
+/*--------------------------------- CONTACT.HTML additional CSS ----------------------------------*/
 
   /* Full-width map styling */
 .full-width-map iframe {
