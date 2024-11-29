@@ -642,15 +642,27 @@ footer p {
     transition: visibility 0s, opacity 0.3s ease;
 }
 
+.popup-gif {
+    max-width: 80%; /* Ensure it fits within the popup */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Match the popup's rounded corners */
+}
+
 /* Popup Content */
 .popup-content {
-    background-color: #fff;
+    background-color: #222222;
     padding: 20px;
     width: 300px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
+}
+
+.popup-p {
+    /*change <p> tag to white*/
+    color: white;
+    margin-top: -20px;
 }
 
 /* Close Button */
@@ -1135,95 +1147,95 @@ footer p {
 
 /*cart page responsive web design*/
 @media (max-width: 768px) {
-    .shopping-cart {
-      padding: 10px; /* Reduce padding for compactness */
-    }
-  
-    /* Separator line below the heading */
-    .shopping-cart h1 {
-      font-size: 1.5rem;
-      text-align: center;
-      margin-bottom: 15px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #ddd;
-    }
-  
-    .cart-item {
-      display: flex;
-      flex-direction: column; /* Stack items */
-      align-items: center; /* Center content */
-      text-align: center; /* Center text alignment */
-      gap: 10px; /* Space between elements */
-      border-bottom: 1px solid #ddd;
-      padding: 10px 0;
-      position: relative; /* Enable positioning for X button */
-      margin-top: 10px;
-    }
-  
-    .cart-item .product-image img {
-      width: 200px; /* Image size */
-      height: 200px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-  
-    /* X button positioning */
-    .cart-item .remove-item button {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      font-size: 1.5rem;
-      color: #f00;
-      background: none;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-  
-    .cart-item .remove-item button:hover {
-      transform: scale(1.2);
-    }
-  
-    .cart-item .product-details h2 {
-      font-size: 1rem; /* Smaller title size */
-      margin: 5px 0;
-    }
-  
-    .cart-item .product-details p {
-      font-size: 0.85rem; /* Smaller subtitle */
-      margin: 0;
-    }
-  
-    .cart-item .product-price {
-      font-size: 1rem;
-      font-weight: bold;
-      margin: 5px 0;
-    }
-  
-    .cart-item .product-quantity {
-      display: flex;
-      align-items: center;
-      justify-content: center; /* Center the quantity section */
-      gap: 5px;
-      font-size: 0.85rem; /* Reduce font size */
-    }
-  
-    /* Adjust subtotal and checkout */
-    .cart-summary {
-      text-align: center;
-      padding: 10px 0;
-    }
-  
-    .cart-summary p {
-      font-size: 1rem;
-    }
-  
-    .checkout-button {
-      width: 170px;
-      font-size: 1rem;
-      padding: 12px;
-    }
-  }
+.shopping-cart {
+    padding: 10px; /* Reduce padding for compactness */
+}
+
+/* Separator line below the heading */
+.shopping-cart h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column; /* Stack items */
+    align-items: center; /* Center content */
+    text-align: center; /* Center text alignment */
+    gap: 10px; /* Space between elements */
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    position: relative; /* Enable positioning for X button */
+    margin-top: 10px;
+}
+
+.cart-item .product-image img {
+    width: 200px; /* Image size */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* X button positioning */
+.cart-item .remove-item button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.5rem;
+    color: #f00;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cart-item .remove-item button:hover {
+    transform: scale(1.2);
+}
+
+.cart-item .product-details h2 {
+    font-size: 1rem; /* Smaller title size */
+    margin: 5px 0;
+}
+
+.cart-item .product-details p {
+    font-size: 0.85rem; /* Smaller subtitle */
+    margin: 0;
+}
+
+.cart-item .product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.cart-item .product-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the quantity section */
+    gap: 5px;
+    font-size: 0.85rem; /* Reduce font size */
+}
+
+/* Adjust subtotal and checkout */
+.cart-summary {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.cart-summary p {
+    font-size: 1rem;
+}
+
+.checkout-button {
+    width: 170px;
+    font-size: 1rem;
+    padding: 12px;
+}
+}
 
 /*--------------------------------- CONTACT.HTML additional CSS ----------------------------------*/
 
