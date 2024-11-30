@@ -5,7 +5,6 @@ console.log("VoyageVinyl script.js loaded successfully.");
 // Console log to check if popup is shown
 console.log("Popup status in localStorage:", localStorage.getItem("popupShown"));
 
-
 /* Popup Functionality */
 // Trigger popup ONCE ONLY when the page loads
 // Check if the popup has already been shown during this session
@@ -126,15 +125,6 @@ navLinks.forEach((link) => {
   }
 });
 
-
-/* Product Click Placeholder */
-// Add click events to products for potential expansion
-//document.querySelectorAll(".product").forEach((product) => {
-//  product.addEventListener("click", () => {
-//    alert("Product details coming soon!"); // Placeholder action
-//  });
-//});
-
 /* Featured Video Alert */
 // Display an alert when a user interacts with the featured video
 const featuredVideo = document.querySelector("video");
@@ -170,7 +160,6 @@ window.onload = function () {
         });
     }
 });
-
 
 // Back to Top Button Functionality
 document.addEventListener("DOMContentLoaded", function () {

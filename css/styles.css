@@ -279,7 +279,7 @@ main {
         grid-template-columns: repeat(3, 1fr); /* 2 products per row on mobile and tablet */
     }
     .top-sellers .product img {
-        height: 180px; /* Adjust height for smaller screens */
+        height: 250px; /* Adjust height for smaller screens */
     }
     .product h3 {
         margin-top: 0px; /* Reduce the gap between the image and title */
@@ -383,6 +383,9 @@ main {
 @media (max-width: 1024px) {
     .product-list {
         grid-template-columns: repeat(3, 1fr); /* 3 items per row on medium screens */
+    }
+    .product img {
+        height: 250px; /*reduce image size for small screen*/
     }
 }
 
