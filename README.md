@@ -68,8 +68,9 @@ VoyageVinyl is a made up website that showcases exclusive vinyl record collectio
 - [The Weeknd - After Hours (Swee Lee)](https://www.sweelee.com.sg/products/after-hours-the-weeknd-vinyl)
 - [Clairo - Charm Vinyl (Swee Lee)](https://www.sweelee.com.sg/products/charm-clairo-vinyl-ae)
 - [The Neighbourhood - Hard to Imagine (Amazon)](https://www.amazon.sg/Hard-Imagine-Neighbourhood-Ever-Changing/dp/B0CGYCSYH3)
-- [Spotify - A Beautiful Blur](https://open.spotify.com/album/4R3ERcDOQP7o1Lkok2uO7E)
+- [Spotify - wave to earth 0.02](https://open.spotify.com/album/4R3ERcDOQP7o1Lkok2uO7E)
 - [DeviantArt - Aespa Dreams Album](https://www.deviantart.com/sivan67/art/aespa-Dreams-Come-True-Album-Cover-902887924)
+- [Twice - Pink Vinyl](https://www.sweelee.com.sg/products/twice-pink-vinyl-twice-vinyl-psp)
 
 ---
 
