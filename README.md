@@ -30,6 +30,8 @@ VoyageVinyl is a made up website that showcases exclusive vinyl record collectio
    git clone https://github.com/Zhuang-Zixian/FED_S10270525_Zixian_Assg1_website.git
    ```
 
+---
+
 ## 🛠️ **Technologies Used**
 - **HTML5**: Semantic and accessible markup for a structured web experience.
 - **CSS3**: Custom styling for responsiveness and design appeal.
@@ -40,19 +42,41 @@ VoyageVinyl is a made up website that showcases exclusive vinyl record collectio
 ---
 
 ## 🖼️ **Design Details**
-- **Wireframe**: [Figma Link Placeholder](#)
+- **Wireframe**: [Wireframe on Figma](https://www.figma.com/design/LiYRsyEhYldVa4PxSuq83g/FED-ASG-1-Wireframe?node-id=1-2&t=itkbG8GdYUdxT5qv-1)
 - **Mobile-First Design**: Fully tested and optimized for all screen sizes.
 - **Validation**: HTML and CSS validated using [W3C Validator](https://validator.w3.org/) and [CSS Jigsaw](https://jigsaw.w3.org/css-validator/).
 
 ---
 
 ## 📝 **References and Citations**
-(Add all external resources, tools, and code snippets that were used or referenced for this project.)
+### Hero Section Images:
+- [Hero Section Canva Images](https://www.canva.com/design/DAGXS1FNfvM/W6-vYd5AEPNA7SXAEKPIag/edit)
 
----
+### Social Media Icons:
+- [Social Media Icons on Canva](https://www.canva.com/design/DAGXXhSJmhE/IltD102XshN5O-mflZGqgg/edit)
+
+### Logos:
+- [Logos on Canva](https://www.canva.com/design/DAGXSZmnQqk/Ho1KpN7z4QovKBtdfzPlEQ/edit)
+
+### Product Images:
+- [Daniel Caesar - Never Enough (Complex)](https://www.complex.com/music/a/louis-pavlakos/daniel-caesar-never-enough-charts)
+- [RetroCrates - Daniel Caesar](https://www.retrocrates.com/wp-content/uploads/2023/04/dabniel.jpg)
+- [RetroCrates - Arctic Monkeys](https://www.retrocrates.com/product/arctic-monkeys-am-vinyl-lp/)
+- [Swee Lee - LANY: A Beautiful Blur](https://www.sweelee.com.sg/products/a-beautiful-blur-uk-reissue-lany-vinyl-ae)
+- [Swee Lee - Keshi: Requiem](https://www.sweelee.com.sg/products/requiem-keshi-vinyl-ae)
+- [KRMerchs - IVE Vinyl LP](https://krmerchs.com/products/ive-ive-ive-lp-ver?_pos=16&_sid=d73bb724d&_ss=r)
+- [The Weeknd - After Hours (Swee Lee)](https://www.sweelee.com.sg/products/after-hours-the-weeknd-vinyl)
+- [Clairo - Charm Vinyl (Swee Lee)](https://www.sweelee.com.sg/products/charm-clairo-vinyl-ae)
+- [The Neighbourhood - Hard to Imagine (Amazon)](https://www.amazon.sg/Hard-Imagine-Neighbourhood-Ever-Changing/dp/B0CGYCSYH3)
+- [Spotify - A Beautiful Blur](https://open.spotify.com/album/4R3ERcDOQP7o1Lkok2uO7E)
+- [DeviantArt - Aespa Dreams Album](https://www.deviantart.com/sivan67/art/aespa-Dreams-Come-True-Album-Cover-902887924)
 
 ---
 
 ## 📢 **Acknowledgements**
-- [Normalize.css](https://necolas.github.io/normalize.css/) for cross-browser consistency.
-- [Poppins Font](https://fonts.google.com/) for typography.
+- **Libraries and Tools**:
+  - [Normalize.css](https://necolas.github.io/normalize.css/) for cross-browser consistency.
+  - [Poppins Font](https://fonts.google.com/) for typography.
+  - [W3C Validator](https://validator.w3.org/) and [CSS Jigsaw](https://jigsaw.w3.org/css-validator/) for validation.
+- **Hero Section Images, Logos, and Icons**: Created and edited on Canva.
+- **Product Images**: Retrieved from RetroCrates, Swee Lee, KRMerchs, and Amazon.
