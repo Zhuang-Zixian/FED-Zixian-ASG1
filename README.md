@@ -4,6 +4,8 @@
 
 VoyageVinyl is a made up website that showcases exclusive vinyl record collections. It provides an interactive platform for users to explore top selling vinyl records, discover new arrivals, and enjoy featured artist music videos—all while being optimised for modern web standards and ensuring responsive web design.
 
+Click here to visit the website hosted by github: [Here](https://zhuang-zixian.github.io/FED_S10270525_Zixian_Assg1_website/)
+
 ---
 
 ## 🚀 **Features**
